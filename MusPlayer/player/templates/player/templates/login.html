@@ -1,0 +1,10 @@
+{% extends 'player/templates/index.html' %}
+{% block title %}Login{% endblock %}
+{% block main %}
+<form action="" method="post" id="login_form">
+    {% csrf_token %}
+    <input type="text" id="from_input" name="login" placeholder="Логин" required>
+    <input type="password" id="from_input" name="password" placeholder="Пароль" required>
+    <input type="submit" id="from_input">
+</form>
+{% endblock %}
