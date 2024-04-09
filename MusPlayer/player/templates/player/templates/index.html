@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>{% block title %}Music Player{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div class="profile">
+            <a href="">Пользователь</a>
+            <a href="">Профиль</a>
+            <a href="">Выход</a>
+        </div>
+    </header>
+    <main>
+        <div class="loader" id="loader"></div>
+        {% include 'player/templates/list.html' %}
+    </main>
+    <footer>
+        <div>
+            <div id="not_active_duration"></div>
+            <div id="active_duration"></div>
+        </div>
+        <div id="left_said">
+            <button id="next">&#11164</button>
+            <button id="play_pause">&#9658</button>
+            <button id="last">&#11166</button>
+        </div>
+        <div id="mid">
+            <div id="name_music"></div>
+            <div id="timer"></div>
+        </div>
+        <div id="left_said">
+            <div id="volume"></div>
+            <button id="loop">&#11156</button>
+        </div>
+    </footer>
+</body>
+</html>
